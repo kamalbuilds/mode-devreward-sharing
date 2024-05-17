@@ -6,7 +6,7 @@ Welcome to the SFS NFT Fractionalization DApp! This innovative decentralized app
 
 **Sequencer Fee Sharing (SFS)** is a groundbreaking mechanism implemented by Mode to reward developers for their contributions to network growth. By sharing a portion of the earned fees with smart contract owners, developers are incentivized to create and maintain valuable applications. This revenue is represented by an SFS NFT, which the owner can claim.
 
-Our DApp empowers you to store your SFS NFTs and fractionalize them into tokens. These tokens can then be distributed among your team members, enabling each individual to claim their corresponding share of the NFT's revenue.
+Our DApp empowers you to store your SFS NFTs and fractionalize them into tokens. These tokens can then be distributed among your team members, enabling each individual to claim their corresponding share of the SFS revenue.
 
 ## Features
 
