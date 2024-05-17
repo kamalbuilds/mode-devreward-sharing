@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/page.module.css";
 
-const LazyYoutube = ({ videoId }) => {
+const LazyYoutube = ({ videoId } : any) => {
   const [load, setLoad] = useState(false);
   const videoRef = useRef(null);
 
@@ -15,7 +15,7 @@ const LazyYoutube = ({ videoId }) => {
       }
     });
 
-    observer.observe(videoRef.current);
+    observer.observe(videoRef.current!);
 
     return () => {
       if (videoRef.current) {
