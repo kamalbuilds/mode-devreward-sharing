@@ -1,9 +1,9 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Devfrens on Mode",
   description:
-    "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.",
+    "Our DApp empowers you to store your SFS NFTs and fractionalize them into tokens. These tokens can then be distributed among your team members, enabling each individual to claim their corresponding share of the NFT's revenue.",
   mainNav: [
     {
       title: "Home",

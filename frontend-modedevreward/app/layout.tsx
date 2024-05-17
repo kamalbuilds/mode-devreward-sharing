@@ -1,3 +1,4 @@
+"use client";
 import "@/styles/globals.css"
 import { Metadata } from "next"
 
@@ -7,29 +8,18 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ThirdwebProvider } from "@thirdweb-dev/react";
+import { ModeTestnet } from "@thirdweb-dev/chains";
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
-}
 
 interface RootLayoutProps {
   children: React.ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const id = process.env.NEXT_PUBLIC_APP_CLID || "";
+
+
   return (
     <>
       <html lang="en" suppressHydrationWarning>
@@ -40,6 +30,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
+           <ThirdwebProvider
+            activeChain={ModeTestnet}
+            clientId= {process.env.NEXT_PUBLIC_APP_CLID}
+          >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
@@ -47,6 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </div>
             <TailwindIndicator />
           </ThemeProvider>
+          </ThirdwebProvider>
         </body>
       </html>
     </>

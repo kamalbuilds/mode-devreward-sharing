@@ -1,4 +1,4 @@
-# SFS NFT Fractionalization DApp
+# Devfrens on Mode with SFS NFT Fractionalization DApp
 
 Welcome to the SFS NFT Fractionalization DApp! This innovative decentralized application is designed to transform how you manage your Sequencer Fee Sharing (SFS) NFTs, allowing you to store, fractionalize, and distribute ownership among your teammates seamlessly.
 
