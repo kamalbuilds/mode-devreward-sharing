@@ -1,13 +1,7 @@
-# Sample Hardhat Project
+distributeFractions function: This function is added to the FractionalizeSNFT contract. It takes the fraction contract address, an array of recipients, and an array of percentages. It checks that the total percentages sum up to 100 and distributes the tokens accordingly.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+SFTFrenToken contract: The SFTFrenToken contract is updated to handle the transfer logic, including the
+ royalty fee deduction.
 
-Try running some of the following tasks:
+These contract functions will ensure that the fractionalized tokens can be distributed according to user-specified percentages among multiple recipients.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
