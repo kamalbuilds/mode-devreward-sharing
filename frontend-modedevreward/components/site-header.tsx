@@ -5,8 +5,9 @@ import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { ConnectWallet } from "@thirdweb-dev/react"
- 
+import { ConnectButton } from "thirdweb/react"
+import { createThirdwebClient } from "thirdweb"
+import { client} from "@/config/contract";
 
 export function SiteHeader() {
 
@@ -48,7 +49,7 @@ export function SiteHeader() {
             </Link>
             <ThemeToggle />
 
-            <ConnectWallet  />
+            <ConnectButton client={client}  />
           </nav>
         </div>
       </div>

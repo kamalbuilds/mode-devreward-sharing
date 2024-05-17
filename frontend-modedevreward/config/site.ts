@@ -9,10 +9,25 @@ export const siteConfig = {
       title: "Home",
       href: "/",
     },
+    {
+      title: "Deposit NFT",
+      href: "/depositnft",
+    },
+    {
+      title: "Fractionalize NFT",
+      href: "/fractionalizenft",
+    },
+    {
+      title: "Distribute",
+      href: "/share",
+    },
+    {
+      title: "Withdraw NFT",
+      href: "/withdrawnft",
+    }
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
+    twitter: "https://twitter.com/0xkamal7",
+    github: "https://github.com/kamalbuilds/mode-devreward-sharing",
   },
 }

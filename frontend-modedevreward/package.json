@@ -18,7 +18,6 @@
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
-    "@thirdweb-dev/react": "^4.6.24",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "ethers": "5",
@@ -31,6 +30,7 @@
     "sharp": "^0.31.3",
     "tailwind-merge": "^1.13.2",
     "tailwindcss-animate": "^1.0.6",
+    "thirdweb": "^5.23.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -44,6 +44,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-tailwindcss": "^3.13.0",
+    "pino-pretty": "^11.0.0",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "tailwindcss": "^3.3.2"

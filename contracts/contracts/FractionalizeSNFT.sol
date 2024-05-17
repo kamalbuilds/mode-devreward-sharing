@@ -23,11 +23,11 @@ contract FractionalizeSNFT is IERC721Receiver {
         bool hasFractionalized; //has deposited nft been fractionalized
     }
 
-    function approveNftforfract(uint256 _nftId) public {
-        ERC721 NFT = ERC721(0xBBd707815a7F7eb6897C7686274AFabd7B579Ff6);
-        NFT.approve(address(this), _nftId);
+    function approvetokens(uint256 amount, address token) public {
+        FractionToken FTOKEN = FractionToken(token);
+        FTOKEN.approve(address(this), amount);
     }
-
+    
     function depositNft(uint256 _nftId) public {
         ERC721 NFT = ERC721(0xBBd707815a7F7eb6897C7686274AFabd7B579Ff6);
         NFT.safeTransferFrom(msg.sender, address(this), _nftId);
