@@ -38,11 +38,13 @@ export default function DistributeFraction() {
 
   const { fields: recipientFields, append: appendRecipient, remove: removeRecipient } = useFieldArray({
     control: form.control,
+    // @ts-ignore
     name: "recipients"
   });
 
   const { fields: percentageFields, append: appendPercentage, remove: removePercentage } = useFieldArray({
     control: form.control,
+    // @ts-ignore
     name: "percentages"
   });
 

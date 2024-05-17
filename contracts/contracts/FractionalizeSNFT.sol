@@ -24,7 +24,7 @@ contract FractionalizeSNFT is IERC721Receiver {
     }
 
     function approvetokens(uint256 amount, address token) public {
-        FractionToken FTOKEN = FractionToken(token);
+        SFTFrenToken FTOKEN = SFTFrenToken(token);
         FTOKEN.approve(address(this), amount);
     }
     
