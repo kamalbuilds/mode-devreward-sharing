@@ -28,7 +28,8 @@ contract FractionalizeSNFT is IERC721Receiver {
         address fractionContractAddress; 
         uint256 supply;
         bool hasFractionalized;
-
+    }
+    
     struct FractionHolder {
         uint256 amount;
         bool exists;
