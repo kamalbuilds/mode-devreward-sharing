@@ -8,6 +8,10 @@ Welcome to the SFS NFT Fractionalization DApp! This innovative decentralized app
 
 Our DApp empowers you to store your SFS NFTs and fractionalize them into tokens. These tokens can then be distributed among your team members, enabling each individual to claim their corresponding share of the SFS revenue.
 
+![Screenshot 2024-05-23 142443](https://github.com/kamalbuilds/mode-devreward-sharing/assets/95926324/696558d3-9a0f-4c36-ab9a-735bf65c9bb4)
+
+![image](https://github.com/kamalbuilds/mode-devreward-sharing/assets/95926324/d2cf2b90-2cce-482a-9636-f2297e888086)
+
 ## Features
 
 ### 1. **Secure NFT Storage**
