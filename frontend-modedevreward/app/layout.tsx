@@ -9,7 +9,6 @@ import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ThirdwebProvider } from "thirdweb/react";
-import { ModeTestnet } from "@thirdweb-dev/chains";
 
 
 interface RootLayoutProps {
@@ -31,8 +30,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
            <ThirdwebProvider
-            // activeChain={ModeTestnet}
-            // clientId= {process.env.NEXT_PUBLIC_APP_CLID}
           >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
