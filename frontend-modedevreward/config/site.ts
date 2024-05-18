@@ -24,7 +24,11 @@ export const siteConfig = {
     {
       title: "Withdraw NFT",
       href: "/withdrawnft",
-    }
+    },
+    {
+      title: "Claim Rewards",
+      href: "/claimrewards",
+    },
   ],
   links: {
     twitter: "https://twitter.com/0xkamal7",

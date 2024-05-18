@@ -19,12 +19,10 @@ export default function IndexPage() {
       </div>
       <div className="flex gap-4">
         <Link
-          href="/demo"
-          // target="_blank"
-          // rel="noreferrer"
+          href="/depositnft"
           className={buttonVariants()}
         >
-          Demo
+          Deposit NFT 🥷
         </Link>
         <Link
           target="_blank"
@@ -36,7 +34,7 @@ export default function IndexPage() {
         </Link>
       </div>
       <div>
-        {/* <LazyYoutube videoId={""} /> */}
+        <LazyYoutube videoId={"vjxTuCYLX-o"} />
       </div>
     </section>
   )

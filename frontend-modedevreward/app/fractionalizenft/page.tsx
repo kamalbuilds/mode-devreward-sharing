@@ -67,6 +67,7 @@ export default function CreateFraction() {
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="max-w-md w-full flex flex-col gap-4">
+        <h2>Step2: Fractionalise your SNFT</h2>
           <FormField
             control={form.control}
             name="nftId"

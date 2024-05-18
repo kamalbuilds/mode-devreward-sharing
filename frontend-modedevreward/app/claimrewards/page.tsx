@@ -39,7 +39,7 @@ export default function DepositNFT() {
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="max-w-md w-full flex flex-col gap-4">
-          <h2>Step1: Deposit your SNFT to the contract</h2>
+          <h2>Claim your rewards fom the SFS contract</h2>
           <FormField
             control={form.control}
             name="nftId"
@@ -48,6 +48,19 @@ export default function DepositNFT() {
                 <FormLabel>NFT ID</FormLabel>
                 <FormControl>
                   <Input placeholder="NFT ID" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="amount"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Amount</FormLabel>
+                <FormControl>
+                  <Input placeholder="Amount" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

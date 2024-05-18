@@ -8,8 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { defineChain, getContract, prepareContractCall, resolveMethod } from "thirdweb";
 import { useSendTransaction } from "thirdweb/react";
-import { client, contract } from "@/config/contract";
-
+import { contract } from "@/config/contract";
 
 const formSchema = z.object({
   fractionContract: z.string().min(1, "Fraction contract address is required"),
@@ -48,7 +47,7 @@ export default function DistributeFraction() {
     name: "percentages"
   });
 
-  const { mutate: sendTransaction, isPending, isError } = useSendTransaction();
+  const { mutate: sendTransaction, isPending, isError , isSuccess} = useSendTransaction();
 
   const handleSubmit = async (values: { fractionContract: string; recipients: string[]; percentages: number[] }) => {
 
@@ -60,14 +59,23 @@ export default function DistributeFraction() {
 
     //   console.log(erc20contract,"erc20")
 
-    //   const approvetransaction = await prepareContractCall({ 
-    //     erc20contract, 
-    //     method: resolveMethod("approve"), 
-    //     params: ["0xb785ea16111F69A874bb688C692c194CF993001F", 10**18] 
-    //   });
+      const approvetransaction = await prepareContractCall({ 
+        contract, 
+        method: resolveMethod("approvetokens"), 
+        params: [10**18, values.fractionContract] 
+      });
+      
 
     //   const { transactionHash : txn } = await sendTransaction(approvetransaction);
     //   console.log(txn);
+
+    //     const transaction = await prepareContractCall({ 
+    //       contract, 
+    //       method: resolveMethod("approvetokens"), 
+    //       params: [amount, token] 
+    //     });
+        const  transactionHash = await sendTransaction(approvetransaction);
+        console.log(transactionHash);
 
 
     console.log(values.recipients);
@@ -141,7 +149,7 @@ export default function DistributeFraction() {
           <Button type="submit" className="w-full" disabled={isPending}>
             {isPending ? "Processing..." : "Submit"}
           </Button>
-          
+          { isSuccess && <p className="text-green-500">Teamates receieved the fractions successfully 🥷🥷</p>}
           {isError && <p className="text-red-500">Transaction failed. Please try again.</p>}
         </form>
       </Form>
